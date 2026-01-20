@@ -1,65 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cross Ark</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rubik+Storm&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
 </head>
 
 <body>
     <header class="cabecalho">
         <div class="logo">
-            <img src="img/logo.png" alt="Logo Cross Ark">
+            <img src="assets/img/logo.png" alt="Logo Cross Ark">
         </div>
-        
-        <nav class="menu">
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
 
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#">Sobre</a></li>
+        <nav class="menu">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#coaches">Coaches</a></li>
+                <li><a href="#">Aulas</a></li>
                 <li><a href="#">Planos</a></li>
                 <li><a href="#">Localização</a></li>
-                <li><a href="#">Coaches</a></li>
-                <li><a href="#">Aulas</a></li>
                 <li><a href="#" class="btn-contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-<section id="inicio">      
-   <div class="imagemfundo">
-    <img src="img/fundo.jpeg" alt="">
-    <div class="cmc">
-    <h1>
-        Aqui disciplina e força<br>
-        trabalham juntas
-    </h1>
+    <section id="inicio">
+        <div class="imagemfundo">
+            <img src="assets/img/fundo.jpeg" alt="">
+            <div class="cmc">
+                <h1>
+                    Aqui disciplina e força<br>
+                    trabalham juntas
+                </h1>
 
-    <p>
-        Treinos intensos, acompanhamento profissional e um ambiente feito
-        para superar limites e transformar sua saúde e bem-estar.
-    </p>
+                <p>
+                    Treinos intensos, acompanhamento profissional e um ambiente feito
+                    para superar limites e transformar sua saúde e bem-estar.
+                </p>
 
-    <span class="assinatura">
-        Centro de Treinamento Cross Arkk
-    </span>
+                <span class="assinatura">
+                    Centro de Treinamento Cross Ark
+                </span>
 
-    <a href="#" class="btn-cta">Conheça nossos planos</a>
-</div>
-   </div>
-    
-    
-</section>
-    
+                <a href="#" class="btn-cta">Conheça nossos planos</a>
+            </div>
+        </div>
+    </section>
 
+
+
+    <section id="sobre">
+        <div class="container-sobre">
+            <div class="sobrebox">
+                <h2>Sobre o CT Cross Ark</h2>
+                <h3>Mais que um box, sua nova comunidade em Suzano.</h3>
+                <div class="divisor"></div>
+                <p>
+                    A Cross Ark nasceu com o objetivo de transformar vidas através do movimento. Localizada no coração
+                    de Suzano, oferecemos um ambiente de treinamento de alta performance, focado em técnica, segurança
+                    e, acima de tudo, resultados reais.
+                </p>
+                <p>
+                    Aqui, acreditamos que a disciplina supera o talento. Nossos coaches são preparados para adaptar cada
+                    treino ao seu nível atual, garantindo que você supere seus limites a cada aula.
+                </p>
+            </div>
+            <div class="sobre-imagem">
+                <img src="assets/img/alunotreinando.png" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="coaches">
+        <div class="container-coach">
+            <div class="coachbox">
+                <h2>Coaches</h2>
+                <div class="coaches-grid">
+                    <div class="coach-card">
+                        <div class="coach-img">
+                            <img src="assets/img/coach1.jpg" alt="Coach 1">
+                        </div>
+                        <div class="coach-info">
+                            <p>Escreva aqui a biografia ou especialidade do primeiro coach. Você pode detalhar a
+                                formação e experiência.</p>
+                        </div>
+                    </div>
+
+                    <div class="coach-card">
+                        <div class="coach-img">
+                            <img src="assets/img/coach2.jpg" alt="Coach 2">
+                        </div>
+                        <div class="coach-info">
+                            <p>Escreva aqui sobre o segundo coach. Destaque suas principais conquistas e estilo de
+                                treino.</p>
+                        </div>
+                    </div>
+
+                    <div class="coach-card">
+                        <div class="coach-img">
+                            <img src="assets/img/coach3.jpg" alt="Coach 3">
+                        </div>
+                        <div class="coach-info">
+                            <p>Escreva aqui sobre o terceiro coach. Fale sobre como ele ajuda os alunos a superarem
+                                limites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="javascript.js"></script>
 </body>
+
+
+
 </html>
