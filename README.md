@@ -21,3 +21,6 @@ Código organizado e identação corrigida
 Menu responsivo com botão hambúrguer (CSS + JavaScript)
 Tela de introdução com identidade visual do box
 Seção “Coaches”, contendo apenas o esqueleto
+Seção de Aulas para deixar exposto as aulas diponíveis
+Seção de Planos para interessados a participar
+
