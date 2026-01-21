@@ -166,7 +166,7 @@ html {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #161212;
     overflow-x: hidden;
     width: 100%;
     padding-top: 70px;
@@ -192,9 +192,9 @@ body {
     left: 15%;
     transform: translateY(-50%);
     padding: 40px 50px;
-    max-width: 420px;
-    background: rgba(0, 0, 0, 0.15);
-    border: 2px solid #271a1a;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #161212;
     border-radius: 12px;
     text-align: left;
 }
@@ -225,9 +225,9 @@ body {
 .btn-cta {
     display: inline-block;
     padding: 12px 28px;
-    border: 2px solid #614b0d;
+    border: 2px solid #22211d;
     border-radius: 30px;
-    background-color: #614511;
+    background-color: #35271c;
     color: white;
     text-decoration: none;
     font-weight: 700;
@@ -235,8 +235,8 @@ body {
 }
 
 .btn-cta:hover {
-    background-color: #00ffff;
-    color: #000;
+    background-color: #583014;
+    color: #ffffff;
 }
 
 #inicio {
@@ -461,4 +461,236 @@ body {
     .coach-card {
         max-width: 100%;
     }
+}
+
+
+
+#aulas {
+    padding: 100px 5% 150px 5%; 
+    background-color: #9c8a7f; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+.tit-aulas {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+.tit-aulas h2 { 
+    font-family: "Rubik Distressed", system-ui;
+    font-size: 2.8rem;
+    color: #35271c;
+    text-transform: uppercase;
+}
+
+.tit-aulas p {
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.container-aulas {
+
+    background-color: #dfd8d1;
+    padding: 50px;            
+    border-radius: 20px;       
+    box-shadow: 0 15px 40px rgba(53, 39, 28, 0.2); 
+    border: 3px solid #35271c; 
+
+    
+    display: flex;
+    align-items: center; 
+    gap: 40px;           
+    max-width: 1800px;   
+    width: 100%;
+}
+.img-crosskids {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start;
+}
+
+.img-crosskids img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: none; 
+}
+
+.aulasinfo {
+    flex: 2;             
+    padding: 40px;       
+    background-color: rgba(75, 63, 37, 0.1);
+    border-radius: 15px;
+}
+
+.aulasinfo h3 {
+    font-family: "Rubik Distressed", system-ui;
+    font-size: 2.5rem; 
+    color: #35271c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.aulasinfo p {
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+
+@media (max-width: 992px) {
+    .container-aulas {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px; /* Menos padding no celular */
+        gap: 30px;
+    }
+    
+    #aulas {
+        align-items: center; /* Centraliza a caixa no celular */
+    }
+}
+
+
+
+#plano {
+    padding: 100px 5% 150px 5%; 
+    background-color: #f1f1f1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.tit-planos {
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+
+.tit-planos h2 { 
+    font-family: "Rubik Distressed", system-ui;
+    font-size: 2.8rem;
+    color: #35271c;
+    text-transform: uppercase;
+}
+
+.tit-planos p {
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+
+.container-planos {
+    position: relative; 
+    background-color: #dfd8d1;
+    padding: 10px; 
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(53, 39, 28, 0.5);
+    border: 3px solid #35271c;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    max-width: 900px;
+    width: 100%;
+    min-height: 200px; 
+}
+
+
+.planosinfo {
+    flex: 1;             
+    padding: 40px;       
+    border-radius: 15px;
+}
+
+.planosinfo h3 {
+    font-family: "Rubik Distressed", system-ui;
+    font-size: 2rem; 
+    color: #35271c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.planosinfo p {
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+
+.formas-pagamento-mini {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.formas-pagamento-mini span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem; 
+    font-weight: 700;
+    color: #35271c;
+    text-transform: uppercase;
+}
+
+.icones-mini {
+    display: flex;
+    gap: 8px;
+}
+
+.icones-mini img {
+    height: 22px; 
+    width: auto;
+    object-fit: contain;
+    
+}
+
+
+@media (max-width: 480px) {
+    .formas-pagamento-mini {
+        position: static;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .container-planos {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+}
+.textp p{
+    font-size: small;
+    color: #35271c;
+    margin-top: 0;
+}
+
+
+
+.container-planos.item-esquerda {
+    justify-content: flex-start; 
+    padding-left: 60px;          
+}
+
+.item-esquerda .planosinfo ul,li {
+    text-align: left;
+    margin-left: 0;
+    color: #35271c;
+    font-size: 1.2rem;
 }
