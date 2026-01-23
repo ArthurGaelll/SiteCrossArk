@@ -35,3 +35,27 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 
+document.querySelectorAll('.plan-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        // 1. Remove classe 'active' de todos e adiciona no clicado
+        document.querySelectorAll('.plan-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // 2. Captura os dados do botão
+        const newPrice = button.getAttribute('data-price');
+        const newLabel = button.getAttribute('data-label');
+
+        // 3. Atualiza o card com animação
+        const priceEl = document.getElementById('display-price');
+        const labelEl = document.getElementById('display-label');
+
+        // Adiciona classe de animação
+        priceEl.parentElement.classList.remove('fade-in');
+        void priceEl.offsetWidth; // Truque para resetar animação CSS
+        priceEl.parentElement.classList.add('fade-in');
+
+        // Troca o texto
+        priceEl.innerText = `R$ ${newPrice}`;
+        labelEl.innerText = newLabel;
+    });
+});

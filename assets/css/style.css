@@ -144,6 +144,65 @@ html {
     }
 }
 
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        gap: 15px;
+        transition: 0.3s ease;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #141312;
+       
+    }
+
+    .nav-links li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block; 
+        padding: 20px 0; 
+        width: 100%; 
+        font-size: 1.2rem;
+    }
+    
+    
+    .nav-links .btn-contato {
+        width: auto;
+        display: inline-block;
+        margin: 10px 0;
+        padding: 15px 30px;
+    }
+
+    
+    
+    .menu.active .nav-links {
+        right: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu.active .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
 
 .menu a::after {
     content: '';
@@ -203,7 +262,7 @@ body {
 #inicio {
     width: 100%;
     position: relative; 
-    display: block; 
+    display: flex; 
 }
 #inicio h2, p, h3 {
     color: white;
@@ -215,6 +274,7 @@ body {
     object-fit: cover;
     display: block;
     position: relative;
+    filter: brightness(0.5); 
 }
 
 
@@ -285,12 +345,25 @@ body {
     }
 
     .cmc {
-        left: 10%;
-        max-width: 380px;
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        
+        width: 90%; 
+        margin: 0; 
+        z-index: 10; 
+        background: rgba(0, 0, 0, 0.6); 
+        text-align: center;
     }
+
 
     .cmc h1 {
         font-size: 2.2rem;
+    }
+
+    .imagemfundo img {
+        filter: brightness(0.5); 
     }
 }
 
@@ -383,7 +456,9 @@ body {
 .divisor {
     width: 100px;
     height: 4px;
-    background-color: #614511;
+    background-color: #614511;    
+    margin-left: auto;
+    margin-right: auto;    
     margin-bottom: 25px;
 }
 
@@ -656,6 +731,63 @@ body {
 }
 
 
+.planos-toggle-container {
+    display: flex;
+    background-color: #dfd8d1;  
+    padding: 5px;
+    border-radius: 50px;
+    margin: 0 auto 30px;
+    max-width: 600px;
+    border: 2px solid #35271c;
+    gap: 5px;
+}
+
+.plan-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px 15px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #35271c;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+
+.plan-btn.active {
+    background-color: #35271c;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.solo-card {
+    min-height: 250px;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#display-price {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+#display-label {
+    font-size: 2rem;
+}
+
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 
 .obs-planos {
@@ -694,10 +826,7 @@ body {
 }
 
 
-.planosinfo:last-of-type {
-    border-bottom: none;
-    margin-bottom: 50px; 
-}
+
 
 
 
@@ -769,7 +898,43 @@ body {
         flex-direction: column;
         padding-bottom: 30px;
     }
+
+    .planosinfo {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .planosinfo h3, .planosinfo p {
+        text-align: center;
+    }
+
+    .planos-toggle-container {
+        flex-direction: column; 
+        border-radius: 15px;    
+        padding: 8px;
+        max-width: 90%;         
+    }
+
+    .plan-btn {
+        width: 100%;            
+        border-radius: 8px;     
+        padding: 12px;
+        font-size: 0.9rem;      
+        text-align: center;
+    }
+
+    .plan-btn.active {
+        transform: scale(1.02);
+    }
+
+    #display-price {
+        font-size: 2.5rem; 
+    }
+   
+    
 }
+
+
 .textp p{
     font-size: small;
     color: #35271c;
@@ -777,15 +942,8 @@ body {
 }
 
 
-@media (max-width: 768px) {
-    .planosinfo {
-        flex-direction: column; 
-        text-align: center;
-    }
-    .planosinfo h3, .planosinfo p {
-        text-align: center;
-    }
-}
+
+    
 
 #horarios {
     padding: 100px 8%;
@@ -848,7 +1006,7 @@ body {
 
 .container-horarios {
     flex-direction: column; 
-    padding: 40px !important;
+    padding: 40px;
 }
 
 .grade-horarios {
@@ -959,6 +1117,76 @@ body {
         width: 100%;
     }
 }
+
+
+#perguntas {
+    padding: 100px 5% 150px 5%; 
+    background-color: #9c8a7f; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    
+}
+    
+
+.tit-perguntas{
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.tit-perguntas h2 { 
+    font-family: "Rubik Distressed", system-ui;
+    font-size: 2.8rem;
+    color: #35271c;
+    text-transform: uppercase;
+}
+
+.tit-perguntas p {
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.container-perguntas{
+    background-color: #dfd8d1;
+    padding: 100px 8%; 
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(207, 196, 188, 0.5);
+    border: 3px solid #35271c;
+    
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    width: 100%;
+    min-height: 200px;
+    
+}
+
+.textperguntas p{    
+    color: #35271c;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.textperguntas h3{
+    font-size: 1.8rem;
+    color: #35271c;
+    font-family: "Rubik Distressed", system-ui;
+    text-align: center;
+}
+
+
+
 
 
 
