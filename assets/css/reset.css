@@ -1,8 +1,4 @@
-@font-face {
-    font-family: 'Roboto Condensed';
-    src: url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
-}
-
+/* Redefinições */
 * {
 	margin: 0;
 	padding: 0;
@@ -10,6 +6,49 @@
 	font-family: "Roboto Condensed", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; 
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 body {
 	line-height: 1;
+	background-color: #161212;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 70px;
+}
+
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik Distressed';
+    src: url('../fonts/RubikDistressed-Regular.ttf') format('truetype');
 }

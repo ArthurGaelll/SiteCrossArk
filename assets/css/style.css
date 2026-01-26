@@ -1,29 +1,11 @@
-@font-face {
-    font-family: 'Montserrat';
-    src: url('../fonts/Montserrat-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Rubik Distressed';
-    src: url('../fonts/RubikDistressed-Regular.ttf') format('truetype');
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 70px; 
-}
-
+/* Barra de Navegação */
 .logo img {
-    height: 75px;
+    height: 60px;
     width: auto;
     max-width: 130px;
     object-fit: contain;
     margin-left: 30px;
 }
-
-
 
 .menu ul {
     display: flex;
@@ -64,9 +46,6 @@ html {
     align-items: center;
 }
 
-
-
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -80,128 +59,6 @@ html {
     height: 3px;
     background-color: #fff;
     transition: 0.3s;
-}
-
-
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        gap: 15px;
-        transition: 0.3s ease;
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #141312;
-       
-    }
-
-    .nav-links li {
-        width: 100%; 
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block; 
-        padding: 20px 0; 
-        width: 100%; 
-        font-size: 1.2rem;
-    }
-    
-    
-    .nav-links .btn-contato {
-        width: auto;
-        display: inline-block;
-        margin: 10px 0;
-        padding: 15px 30px;
-    }
-
-    
-    
-    .menu.active .nav-links {
-        right: 0;
-    }
-
-    .menu.active .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .menu.active .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu.active .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
-}
-
-@media (max-width: 992px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; 
-        gap: 15px;
-        transition: 0.3s ease;
-        position: fixed;
-        top: 70px;
-        right: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: #141312;
-       
-    }
-
-    .nav-links li {
-        width: 100%; 
-        text-align: center;
-    }
-
-    .nav-links a {
-        display: block; 
-        padding: 20px 0; 
-        width: 100%; 
-        font-size: 1.2rem;
-    }
-    
-    
-    .nav-links .btn-contato {
-        width: auto;
-        display: inline-block;
-        margin: 10px 0;
-        padding: 15px 30px;
-    }
-
-    
-    
-    .menu.active .nav-links {
-        right: 0;
-    }
-
-    .menu.active .hamburger span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-    }
-
-    .menu.active .hamburger span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu.active .hamburger span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-    }
 }
 
 .menu a::after {
@@ -223,8 +80,6 @@ html {
     color: #f1f1f1;
 }
 
-
-
 .btn-contato {
     background-color: #35271c;
     padding: 10px 20px;
@@ -241,28 +96,12 @@ html {
     display: none;
 }
 
-
-
-.titulo h1 {
-    color: white;
-    text-align: center;
-    margin-top: 2%;
-    font-size: xx-large;
-    font-family: "Rubik Distressed", system-ui;
-    margin-bottom: 2%;
-}
-
-body {
-    background-color: #161212;
-    overflow-x: hidden;
-    width: 100%;
-    padding-top: 70px;
-}
+/* Section Inicio */
 
 #inicio {
     width: 100%;
     position: relative; 
-    display: flex; 
+    display: flex;
 }
 #inicio h2, p, h3 {
     color: white;
@@ -277,7 +116,14 @@ body {
     filter: brightness(0.5); 
 }
 
-
+.titulo h1 {
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+    font-size: xx-large;
+    font-family: "Rubik Distressed", system-ui;
+    margin-bottom: 2%;
+}
 
 .cmc {
     position: absolute;
@@ -332,90 +178,7 @@ body {
     color: #ffffff;
 }
 
-#inicio {
-    width: 100%;
-    display: flex;
-}
-
-
-
-@media (max-width: 992px) {
-    .menu ul {
-        gap: 15px;
-    }
-
-    .cmc {
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        
-        width: 90%; 
-        margin: 0; 
-        z-index: 10; 
-        background: rgba(0, 0, 0, 0.6); 
-        text-align: center;
-    }
-
-
-    .cmc h1 {
-        font-size: 2.2rem;
-    }
-
-    .imagemfundo img {
-        filter: brightness(0.5); 
-    }
-}
-
-@media (max-width: 768px) {
-    .logo img {
-        height: 70px;
-    }
-
- 
-    .cmc {
-        position: absolute; 
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); 
-        
-        width: 90%; 
-        margin: 0; 
-        z-index: 10; 
-        background: rgba(0, 0, 0, 0.6); 
-        text-align: center;
-    }
-
-    
-    .imagemfundo img {
-        height: 100vh; 
-        filter: brightness(0.5); 
-    }
-
-
-    .cmc h1 {
-        font-size: 1.8rem;
-    }
-
-    .imagemfundo img {
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 480px) {
-    .cmc h1 {
-        font-size: 1.5rem;
-    }
-
-    .btn-cta {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
+/* Section Sobre */
 
 #sobre {
     padding: 200px 8%;
@@ -460,6 +223,7 @@ body {
     margin-left: auto;
     margin-right: auto;    
     margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .sobrebox p {
@@ -484,28 +248,9 @@ body {
     box-shadow: 20px 20px 0px #35271c;
 }
 
-@media (max-width: 992px) {
-    .container-sobre {
-        flex-direction: column;
-        text-align: center;
-    }
+/* Section Coach */
 
-    .divisor {
-        margin: 0 auto 25px;
-    }
-
-    .sobrebox p {
-        text-align: center;
-    }
-
-    .sobre-imagem img {
-        box-shadow: 10px 10px 0px #35271c;
-    }
-}
-
-
-
-#coaches {
+/* #coaches {
     padding: 100px 8%;
     background-color: #161212;
     display: flex;
@@ -568,10 +313,10 @@ body {
     line-height: 1.6;
     text-align: center;
     opacity: 0.9;
-}
+} */
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .coaches-grid {
         gap: 50px;
     }
@@ -579,9 +324,10 @@ body {
     .coach-card {
         max-width: 100%;
     }
-}
+} */
 
 
+/* Section Aulas */
 
 #aulas {
     padding: 100px 5% 150px 5%; 
@@ -591,13 +337,11 @@ body {
     align-items: flex-start; 
 }
 
-
 .tit-aulas {
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
 }
-
 
 .tit-aulas h2 { 
     font-family: "Rubik Distressed", system-ui;
@@ -619,6 +363,7 @@ body {
     border-radius: 20px;       
     box-shadow: 0 15px 40px rgba(53, 39, 28, 0.2); 
     border: 3px solid #35271c; 
+    margin-bottom: 40px;
 
     
     display: flex;
@@ -627,6 +372,7 @@ body {
     max-width: 1800px;   
     width: 100%;
 }
+
 .img-crosskids {
     flex: 1; 
     display: flex;
@@ -663,25 +409,7 @@ body {
     text-align: justify;
 }
 
-
-@media (max-width: 992px) {
-    .container-aulas {
-        flex-direction: column;
-        text-align: center;
-        padding: 30px; /* Menos padding no celular */
-        gap: 30px;
-    }
-    
-    #aulas {
-        align-items: center; 
-    }
-
-    .aulasinfo p{
-        text-align: left;
-    }
-}
-
-
+/* Section Planos */
 
 #plano {
     padding: 100px 5% 150px 5%; 
@@ -697,7 +425,6 @@ body {
     width: 100%;
 }
 
-
 .tit-planos h2 { 
     font-family: "Rubik Distressed", system-ui;
     font-size: 2.8rem;
@@ -709,8 +436,7 @@ body {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-}
-
+} 
 
 .container-planos {
     position: relative;
@@ -729,7 +455,6 @@ body {
     min-height: 200px;
     padding-bottom: 40px;
 }
-
 
 .planos-toggle-container {
     display: flex;
@@ -757,7 +482,6 @@ body {
     text-transform: uppercase;
 }
 
-
 .plan-btn.active {
     background-color: #35271c;
     color: #fff;
@@ -779,7 +503,6 @@ body {
     font-size: 2rem;
 }
 
-
 .fade-in {
     animation: fadeIn 0.5s;
 }
@@ -788,7 +511,6 @@ body {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
 
 .obs-planos {
     display: block;
@@ -824,11 +546,6 @@ body {
     text-align: right;
     margin: 0;
 }
-
-
-
-
-
 
 .formas-pagamento-mini {
     position: absolute;
@@ -870,6 +587,7 @@ body {
     align-items: center;
     gap: 15px;
     margin-top: 10px;
+    margin-right: -10px;
 }
 
 .aceitamos-tbm span {
@@ -880,70 +598,13 @@ body {
     text-transform: uppercase;
 }
 
-
-@media (max-width: 768px) {
-    .formas-pagamento-mini {
-        position: static;
-        align-items: center;
-        margin-top: 20px;
-    }
-     .aceitamos-tbm {
-        position: static;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    
-    .container-planos {
-        flex-direction: column;
-        padding-bottom: 30px;
-    }
-
-    .planosinfo {
-        flex-direction: column; 
-        text-align: center;
-    }
-
-    .planosinfo h3, .planosinfo p {
-        text-align: center;
-    }
-
-    .planos-toggle-container {
-        flex-direction: column; 
-        border-radius: 15px;    
-        padding: 8px;
-        max-width: 90%;         
-    }
-
-    .plan-btn {
-        width: 100%;            
-        border-radius: 8px;     
-        padding: 12px;
-        font-size: 0.9rem;      
-        text-align: center;
-    }
-
-    .plan-btn.active {
-        transform: scale(1.02);
-    }
-
-    #display-price {
-        font-size: 2.5rem; 
-    }
-   
-    
-}
-
-
 .textp p{
     font-size: small;
     color: #35271c;
     margin-top: 0;
 }
 
-
-
-    
+/* Section Horarios     */
 
 #horarios {
     padding: 100px 8%;
@@ -959,7 +620,6 @@ body {
     margin-bottom: 50px;
     width: 100%;
 }
-
 
 .tit-horarios h2{
     font-family: "Rubik Distressed", system-ui;
@@ -1067,12 +727,10 @@ body {
     font-style: italic;
 }
 
-
-
-
 .kids{
     align-items: center;
 }
+
 .kids h3 {
     font-family: "Rubik Distressed", system-ui;
     color: #161212;
@@ -1104,20 +762,7 @@ body {
     text-align: center;
 }
 
-
-
-
-@media (max-width: 768px) {
-    .grade-horarios {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .coluna-dia {
-        width: 100%;
-    }
-}
-
+/* Section Peguntas */
 
 #perguntas {
     padding: 100px 5% 150px 5%; 
@@ -1127,8 +772,7 @@ body {
     align-items: center; 
     justify-content: center;
     
-}
-    
+}    
 
 .tit-perguntas{
     text-align: center;
@@ -1149,7 +793,6 @@ body {
     font-weight: 600;
     margin-bottom: 10px;
 }
-
 
 .container-perguntas{
     background-color: #dfd8d1;
@@ -1185,12 +828,9 @@ body {
     text-align: center;
 }
 
+/* Footer */
 
-
-
-
-
-.rodape {
+#rodape {
     background-color: #141312;
     color: #f1f1f1;
     padding: 60px 8% 20px 8%;
@@ -1284,6 +924,354 @@ body {
     color: #777;
 }
 
+/* Media Queries */
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        gap: 15px;
+        transition: 0.3s ease;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #141312;
+       
+    }
+
+    .nav-links li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block; 
+        padding: 20px 0; 
+        width: 100%; 
+        font-size: 1.2rem;
+    }
+    
+    
+    .nav-links .btn-contato {
+        width: auto;
+        display: inline-block;
+        margin: 10px 0;
+        padding: 15px 30px;
+    }
+
+    
+    
+    .menu.active .nav-links {
+        right: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu.active .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 992px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        gap: 15px;
+        transition: 0.3s ease;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #141312;
+       
+    }
+
+    .nav-links li {
+        width: 100%; 
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block; 
+        padding: 20px 0; 
+        width: 100%; 
+        font-size: 1.2rem;
+    }
+    
+    
+    .nav-links .btn-contato {
+        width: auto;
+        display: inline-block;
+        margin: 10px 0;
+        padding: 15px 30px;
+    }
+
+    
+    
+    .menu.active .nav-links {
+        right: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu.active .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu.active .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+@media (max-width: 992px) {
+    .menu ul {
+        gap: 15px;
+    }
+
+    .cmc {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        
+        width: 90%; 
+        margin: 0; 
+        z-index: 10; 
+        background: rgba(0, 0, 0, 0.6); 
+        text-align: center;
+    }
+
+
+    .cmc h1 {
+        font-size: 2.2rem;
+    }
+
+    .imagemfundo img {
+        filter: brightness(0.5); 
+    }
+}
+
+@media (max-width: 768px) { 
+    .cmc {
+        position: absolute; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        
+        width: 90%; 
+        margin: 0; 
+        z-index: 10; 
+        background: rgba(0, 0, 0, 0.6); 
+        text-align: center;
+    }
+
+    
+    .imagemfundo img {
+        height: 100vh; 
+        filter: brightness(0.5); 
+    }
+
+
+    .cmc h1 {
+        font-size: 1.8rem;
+    }
+
+    .imagemfundo img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .cmc h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn-cta {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .container-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .divisor {
+        margin: 0 auto 25px;
+    }
+
+    .sobrebox p {
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        box-shadow: 10px 10px 0px #35271c;
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .container-aulas {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px; 
+        gap: 20px;
+    }
+    
+    #aulas {
+        align-items: center; 
+    }
+
+    .aulasinfo p{
+        text-align: left;
+    }
+
+    .aulasinfo h3 {
+        font-size: 1.8rem;
+    }
+    
+    .img-crosskids img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .formas-pagamento-mini {
+        position: static;
+        align-items: center;
+        margin-top: 20px;
+    }
+     .aceitamos-tbm {
+        position: static;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    
+    .container-planos {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+
+    .planosinfo {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .planosinfo h3, .planosinfo p {
+        text-align: center;
+    }
+
+    .planos-toggle-container {
+        flex-direction: column; 
+        border-radius: 15px;    
+        padding: 8px;
+        max-width: 90%;         
+    }
+
+    .plan-btn {
+        width: 100%;            
+        border-radius: 8px;     
+        padding: 12px;
+        font-size: 0.9rem;      
+        text-align: center;
+    }
+
+    .plan-btn.active {
+        transform: scale(1.02);
+    }
+
+    #display-price {
+        font-size: 2.5rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    #horarios {
+        padding: 60px 5%; 
+    }
+
+    .container-horarios {
+        padding: 20px 15px; 
+        width: 95%;
+    }
+
+    .text-title-hr h2 {
+        font-size: 1.5rem; 
+        margin-bottom: 30px;
+    }
+
+    .coluna-dia {
+        min-width: 100% ; 
+        margin-bottom: 30px;
+    }
+
+    .coluna-dia h3 {
+        font-size: 1.3rem;
+    }
+
+    .periodo h4 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    #perguntas {
+        padding: 50px 15px; 
+    }
+
+    .container-perguntas {
+        padding: 40px 15px; 
+        width: 100%;
+        max-width: 100%;
+        min-height: auto; 
+    }
+    
+    .tit-perguntas h2 {
+        font-size: 1.6rem; 
+        line-height: 1.2;
+        word-wrap: break-word; 
+    }
+
+    .textperguntas h3 {
+        font-size: 1.3rem;
+        margin-top: 15px;
+    }
+
+    .textperguntas p {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
 
 @media (max-width: 768px) {
     .container-footer {
@@ -1299,6 +1287,7 @@ body {
         margin-top: 20px;
     }
 }
+
 
 
 
