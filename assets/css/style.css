@@ -3,7 +3,6 @@
     height: 60px;
     width: auto;
     max-width: 130px;
-    object-fit: contain;
     margin-left: 30px;
 }
 
@@ -47,12 +46,19 @@
 }
 
 .hamburger {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
     display: none;
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
     margin-right: 30px;
 }
+    
+
 
 .hamburger span {
     width: 26px;
@@ -248,85 +254,6 @@
     box-shadow: 20px 20px 0px #35271c;
 }
 
-/* Section Coach */
-
-/* #coaches {
-    padding: 100px 8%;
-    background-color: #161212;
-    display: flex;
-    justify-content: center;
-}
-
-.coachbox h2{ 
-    font-family: "Rubik Distressed", system-ui;
-    font-size: 2.8rem;
-    color: bisque;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-
-.coaches-grid {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
-    flex-wrap: wrap; 
-}
-
-
-.coach-card {
-    flex: 1;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.coach-img {
-    width: 100%;
-    aspect-ratio: 1 / 1; 
-    margin-bottom: 20px;
-    border: 2px solid bisque; 
-    overflow: hidden;
-}
-
-.coach-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease;
-}
-
-
-.coach-card:hover img {
-    transform: scale(1.05);
-}
-
-
-.coach-info p {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-align: center;
-    opacity: 0.9;
-} */
-
-
-/* @media (max-width: 768px) {
-    .coaches-grid {
-        gap: 50px;
-    }
-    
-    .coach-card {
-        max-width: 100%;
-    }
-} */
-
-
 /* Section Aulas */
 
 #aulas {
@@ -387,8 +314,7 @@
 }
 
 .aulasinfo {
-    flex: 2;             
-    padding: 40px;       
+    flex: 2;                   
     border-radius: 15px;
 }
 
@@ -407,6 +333,7 @@
     font-size: 1rem;
     font-weight: 500;
     text-align: justify;
+    margin-bottom: 8px;
 }
 
 /* Section Planos */
@@ -422,7 +349,6 @@
 .tit-planos {
     text-align: center;
     margin-bottom: 50px;
-    width: 100%;
 }
 
 .tit-planos h2 { 
@@ -572,7 +498,7 @@
 }
 
 .icones-mini img {
-    height: 22px; 
+    height: 28px; 
     width: auto;
     object-fit: contain;
     
@@ -618,7 +544,6 @@
 .tit-horarios {
     align-items: center;
     margin-bottom: 50px;
-    width: 100%;
 }
 
 .tit-horarios h2{
@@ -639,13 +564,13 @@
 
 .container-horarios{
     background-color: #dfd8d1;
-    padding: 20px; 
+    padding: 40px; 
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(207, 196, 188, 0.5);
     border: 3px solid #35271c;
     
     display: flex;
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     max-width: 900px;
@@ -661,12 +586,7 @@
     margin-top: -10px;
     font-size: 2rem;
     margin-bottom: 50px;
-    
-}
 
-.container-horarios {
-    flex-direction: column; 
-    padding: 40px;
 }
 
 .grade-horarios {
@@ -701,14 +621,6 @@
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 1.1rem;
-}
-
-.periodo p {
-    font-family: 'Montserrat', sans-serif;
-    color: #161212;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 1rem;
 }
 
 .divisor-hr {
@@ -753,17 +665,29 @@
     text-align: center;
 }
 
-.kids p {
+
+.periodo p, 
+.periodo p time, 
+.kids p, 
+.kids p time {
     font-family: 'Montserrat', sans-serif;
     color: #161212;
     font-weight: 500;
     margin-bottom: 8px;
     font-size: 1rem;
     text-align: center;
+    font-variant-numeric: tabular-nums; 
+    letter-spacing: 0.5px;
 }
 
+.coluna-dia article, 
+.coluna-dia p {
+    font-style: normal;
+    text-decoration: none;
+}
 /* Section Peguntas */
 
+/* Section Perguntas - Ajustada sem !important */
 #perguntas {
     padding: 100px 5% 150px 5%; 
     background-color: #9c8a7f; 
@@ -771,8 +695,7 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    
-}    
+}
 
 .tit-perguntas{
     text-align: center;
@@ -794,40 +717,85 @@
     margin-bottom: 10px;
 }
 
-.container-perguntas{
+.container-perguntas {
     background-color: #dfd8d1;
-    padding: 100px 8%; 
+    padding: 50px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(207, 196, 188, 0.5);
     border: 3px solid #35271c;
-    
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: center;
     max-width: 900px;
     width: 100%;
-    min-height: 200px;
-    
+    display: block; 
 }
 
-.textperguntas p{    
-    color: #35271c;
+
+.accordion-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background-color: #f9f7f5;
+    border: 1px solid #35271c;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.faq-item[open] {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(53, 39, 28, 0.1);
+}
+
+.faq-item summary {
+    padding: 18px 25px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-style: italic;
-}
-
-.textperguntas h3{
-    font-size: 1.8rem;
+    font-weight: 700;
     color: #35271c;
-    font-family: "Rubik Distressed", system-ui;
-    text-align: center;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
 }
 
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: #583014;
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+    transform: rotate(45deg);
+}
+
+
+.container-perguntas .faq-content {
+    padding: 0 25px 20px 25px;
+    animation: slideDown 0.4s ease-out;
+}
+
+.container-perguntas .faq-content p {
+    color: #444;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    font-style: normal; 
+    text-align: left;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* Footer */
 
 #rodape {
@@ -913,6 +881,19 @@
 .social-icons {
     margin-top: 20px;
     font-size: 0.9rem;
+    gap: 20px;
+}
+.social-icons p{
+    margin-bottom: 5px;
+}
+
+.social-icons img{
+    max-width: 35px;
+    height: 35px;
+}
+
+.social-icons a{
+    text-decoration: none;
 }
 
 .footer-bottom {

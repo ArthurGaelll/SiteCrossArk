@@ -1,39 +1,32 @@
-const hamburger = document.querySelector('.hamburger'); // Seleciona o botão de três risquinhos
-const menu = document.querySelector('.menu');           // Seleciona o container do menu
-
+// Seleciona o botão e o menu
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
 
 hamburger.addEventListener('click', () => {
-    // Adiciona a classe 'active' se ela não existir, ou remove se ela já existir
+    // Agora o toggle de classe funciona no 'menu' que envolve os links
     menu.classList.toggle('active'); 
 });
 
-
+// Fecha o menu ao clicar no link (Mobile)
 document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', function (e) {
-
-        // 1. Garante que o menu feche ao clicar em um link (importante no mobile)
+    link.addEventListener('click', () => {
         menu.classList.remove('active');
-
-        // 2. Captura o destino do link (ex: #sobre ou #coaches)
-        const href = this.getAttribute('href');
-
-        // 3. Verifica se o link é uma âncora interna (começa com #)
-        if (href.startsWith('#')) {
-            e.preventDefault(); // Impede o navegador de "pular" instantaneamente para a seção
-
-            const targetId = href;
-            const targetElement = document.querySelector(targetId);
-
-            // 4. Executa o deslizamento suave até o elemento de destino
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth' // Define que o movimento será fluido e não um corte seco
-                });
-            }
-        }
     });
 });
 
+// Lógica dos Planos (Mantive idêntica à sua)
+document.querySelectorAll('.plan-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelectorAll('.plan-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const priceEl = document.getElementById('display-price');
+        const labelEl = document.getElementById('display-label');
+
+        priceEl.innerText = `R$ ${button.getAttribute('data-price')}`;
+        labelEl.innerText = button.getAttribute('data-label');
+    });
+});
 
 document.querySelectorAll('.plan-btn').forEach(button => {
     button.addEventListener('click', () => {
@@ -57,5 +50,19 @@ document.querySelectorAll('.plan-btn').forEach(button => {
         // Troca o texto
         priceEl.innerText = `R$ ${newPrice}`;
         labelEl.innerText = newLabel;
+    });
+});
+
+
+
+const items = document.querySelectorAll(".faq-item");
+
+items.forEach((item) => {
+    item.addEventListener("click", () => {
+        items.forEach((otherItem) => {
+            if (otherItem !== item) {
+                otherItem.removeAttribute("open");
+            }
+        });
     });
 });

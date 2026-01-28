@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross Ark</title>
-    <link rel="icon" type="image/png" href="assets/img/favicon.png" >
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" >
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description"
+        content="Cross Ark em Suzano: O melhor treino e infraestrutura. Treinos intensos e acompanhamento profissional para transformar sua saúde.">
+    <title>Cross Ark | O melhor treino e infraestrutura de Suzano</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,11 +19,11 @@
             <img src="./assets/img/logo.png" alt="Logo Cross Ark">
         </div>
         <nav class="menu">
-            <div class="hamburger">
+            <button class="hamburger" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links">
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -33,10 +35,11 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="inicio">
             <div class="imagemfundo">
-                <img src="./assets/img/fundo.jpeg" alt="Imagem de Fundo">
+                <img src="./assets/img/fundo.jpeg" alt="Ambiente de treino Cross Ark">
                 <div class="cmc">
                     <h1>
                         Cross Ark: O melhor treino e infraestrutura<br>
@@ -46,9 +49,9 @@
                         Treinos intensos, acompanhamento profissional e um ambiente feito
                         para superar limites e transformar sua saúde e bem-estar.
                     </p>
-                    <span class="assinatura">
+                    <strong class="assinatura">
                         Centro de Treinamento Cross Ark
-                    </span>
+                    </strong>
                     <a href="#plano" class="btn-cta">Conheça nossos planos</a>
                 </div>
             </div>
@@ -56,7 +59,7 @@
 
         <section id="sobre">
             <div class="container-sobre">
-                <div class="sobrebox">
+                <article class="sobrebox">
                     <h2>Sobre o CT Cross Ark</h2>
                     <h3>Mais que um box, sua nova comunidade em Suzano.</h3>
                     <div class="divisor"></div>
@@ -72,23 +75,24 @@
                         cada
                         treino ao seu nível atual, garantindo que você supere seus limites a cada aula.
                     </p>
-                </div>
-                <div class="sobre-imagem">
-                    <img src="./assets/img/alunotreinando.png" alt="Aluno Cross ARK">
-                </div>
+                </article>
+                <figure class="sobre-imagem">
+                    <img src="./assets/img/alunotreinando.png" alt="Aluno treinando no CT Cross ARK">
+                </figure>
             </div>
         </section>
 
         <section id="aulas">
-            <div class="tit-aulas">
+            <header class="tit-aulas">
                 <h2>Aulas</h2>
                 <p>Aulas disponíveis no CT</p>
                 <div class="divisor"></div>
-            </div>
-            <div class="container-aulas">
-                <div class="img-crosskids">
-                    <img src="./assets/img/treinocross.png" alt="Cross Fit Training">
-                </div>
+            </header>
+
+            <article class="container-aulas">
+                <figure class="img-crosskids">
+                    <img src="./assets/img/treinocross.png" alt="Treino de Cross Fit na Cross Ark">
+                </figure>
                 <div class="aulasinfo">
                     <h3>Cross Fit</h3>
                     <p> As aulas de CrossFit na Cross ARK têm duração de 1 hora e são cuidadosamente estruturadas para
@@ -107,11 +111,12 @@
                         evolução
                         contínua e alto padrão de treino.</p>
                 </div>
-            </div>
-            <div class="container-aulas">
-                <div class="img-crosskids">
-                    <img src="./assets/img/kids.jpg" alt="Cross Kids">
-                </div>
+            </article>
+
+            <article class="container-aulas">
+                <figure class="img-crosskids">
+                    <img src="./assets/img/kids.jpg" alt="Aula de Cross Kids na Cross Ark">
+                </figure>
                 <div class="aulasinfo">
                     <h3>Cross Kids</h3>
                     <p> A aula de Cross Kids inicia-se com alongamentos (5 a 7 minutos), seguidos de exercícios de
@@ -133,161 +138,206 @@
                         das crianças.
                     </p>
                 </div>
-            </div>
+            </article>
         </section>
 
         <section id="plano">
-            <div class="tit-planos">
+            <header class="tit-planos">
                 <h2>Planos</h2>
                 <p>Escolha a melhor opção para você!</p>
                 <div class="divisor"></div>
-            </div>
-            <div class="planos-toggle-container">
+            </header>
+
+            <nav class="planos-toggle-container" aria-label="Seleção de planos">
                 <button class="plan-btn active" data-price="150,00" data-label="Mensal">Mensal</button>
                 <button class="plan-btn" data-price="140,00" data-label="Trimestral">Trimestral</button>
                 <button class="plan-btn" data-price="130,00" data-label="Semestral">Semestral</button>
                 <button class="plan-btn" data-price="120,00" data-label="Anual">Anual</button>
                 <button class="plan-btn" data-price="130,00" data-label="Amigos/Casal">Amigos</button>
-            </div>
+            </nav>
+
             <div class="container-planos solo-card">
                 <div class="planosinfo active-plan">
                     <h3 id="display-label">Mensal</h3>
                     <p id="display-price">R$ 150,00</p>
-                    <span class="obs-planos">*valor mensal cobrado recorrentemente</span>
+                    <small class="obs-planos">*valor mensal cobrado recorrentemente</small>
                 </div>
 
                 <div class="formas-pagamento-mini">
-                    <span>Pagamento:</span>
+                    <strong>Pagamento:</strong>
                     <div class="icones-mini">
-                        <img src="./assets/img/pix.png" alt="Pix">
-                        <img src="./assets/img/cartao.png" alt="Cartão">
-                        <img src="./assets/img/dinheiro.png" alt="Dinheiro">
+                        <img src="./assets/img/pix.png" alt="Forma de pagamento Pix">
+                        <img src="./assets/img/cartao.png" alt="Forma de pagamento Cartão">
+                        <img src="./assets/img/dinheiro.png" alt="Forma de pagamento Dinheiro">
                     </div>
                 </div>
 
                 <div class="aceitamos-tbm">
-                    <span>Aceitamos:</span>
+                    <strong>Aceitamos:</strong>
                     <div class="icones-mini">
-                        <img src="./assets/img/guru.svg" alt="GuruPass">
-                        <img src="./assets/img/totalpass.png" alt="TotalPass">
-                        <img src="./assets/img/wellhub.png" alt="Wellhub">
+                        <img src="./assets/img/GuruPass.png" alt="Convênio GuruPass">
+                        <img src="./assets/img/totalpass.png" alt="Convênio TotalPass">
+                        <img src="./assets/img/wellhub.png" alt="Convênio Wellhub">
                     </div>
-
                 </div>
             </div>
         </section>
 
         <section id="horarios">
-            <div class="tit-horarios">
+            <header class="tit-horarios">
                 <h2>Horários</h2>
                 <p>Veja nossa disponibilidade!</p>
-            </div>
+            </header>
             <div class="container-horarios">
                 <div class="text-title-hr">
                     <h2>Cross Fit</h2>
                 </div>
                 <div class="grade-horarios">
-                    <div class="coluna-dia">
+                    <article class="coluna-dia">
                         <h3>SEG À SEX</h3>
 
                         <div class="periodo">
                             <h4>Manhã</h4>
-                            <p>06:00h às 07:00h</p>
-                            <p>07:00h às 08:00h</p>
-                            <p>08:00h às 09:00h</p>
-                            <p>09:00h às 10:00h</p>
+                            <p><time>06:00h</time> às <time>07:00h</time></p>
+                            <p><time>07:00h</time> às <time>08:00h</time></p>
+                            <p><time>08:00h</time> às <time>09:00h</time></p>
+                            <p><time>09:00h</time> às <time>10:00h</time></p>
                         </div>
 
                         <div class="divisor-hr"></div>
 
                         <div class="periodo">
                             <h4>Tarde / Noite</h4>
-                            <p>17:00h às 18:00h</p>
-                            <p>18:00h às 19:00h</p>
-                            <p>19:00h às 20:00h</p>
-                            <p>20:00h às 21:00h</p>
+                            <p><time>17:00h</time> às <time>18:00h</time></p>
+                            <p><time>18:00h</time> às <time>19:00h</time></p>
+                            <p><time>19:00h</time> às <time>20:00h</time></p>
+                            <p><time>20:00h</time> às <time>21:00h</time></p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="coluna-dia">
+                    <article class="coluna-dia">
                         <h3>SÁBADO</h3>
                         <div class="periodo">
                             <h4>Aula Única</h4>
-                            <p>09:00h às 10:00h</p>
+                            <p><time>09:00h</time> às <time>10:00h</time></p>
                         </div>
-                        <span class="obs-horario">* Horários sujeitos a agendamento prévio.</span>
-                    </div>
+                        <small class="obs-horario">* Horários sujeitos a agendamento prévio.</small>
+                    </article>
                 </div>
                 <div class="text-title-hr">
                     <h2>Cross Kids</h2>
-                    <div class="kids">
+                    <article class="kids">
                         <h3>SÁBADO</h3>
                         <h4>Aula Única</h4>
-                        <p>08:00h às 09:00h</p>
-                    </div>
+                        <p><time>08:00h</time> às <time>09:00h</time></p>
+                    </article>
                 </div>
             </div>
         </section>
 
         <section id="perguntas">
-            <div class="tit-perguntas">
+            <header class="tit-perguntas">
                 <h2>Perguntas Frequentes</h2>
-                <p>Está com dúvida? Isso pode te ajudar.</p>
+                <p>Tire suas dúvidas sobre o funcionamento do nosso CT.</p>
                 <div class="divisor"></div>
-            </div>
+            </header>
+
             <div class="container-perguntas">
-                <div class="textperguntas">
-                    <h3>1</h3>
-                    <p>Ao contratar o plano, os alunos têm acesso aos treinos diariamente, de segunda a sábado.</p>
-                    <h3>2</h3>
-                    <p>Ao contratar o plano, você pode treinar em qualquer horário, sem a necessidade de cumprir
-                        horários
-                        fixos.</p>
-                    <h3>3</h3>
-                    <p>Ao contratar o plano, você pode treinar em qualquer horário, sem a necessidade de cumprir
-                        horários
-                        fixos.</p>
+                <div class="accordion-group">
+                    <details class="faq-item">
+                        <summary>Qual é a frequência semanal permitida nos treinos?</summary>
+                        <div class="faq-content">
+                            <p>Nossos alunos têm total liberdade para treinar diariamente, com aulas disponíveis de
+                                segunda a sábado.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Preciso agendar um horário fixo para treinar?</summary>
+                        <div class="faq-content">
+                            <p>Não é necessário se prender a um único horário. Você pode escolher qualquer aula da nossa
+                                grade que melhor se adapte à sua rotina do dia.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Como funciona a flexibilidade de horários do plano?</summary>
+                        <div class="faq-content">
+                            <p>A adesão a qualquer um de nossos planos garante flexibilidade total, permitindo que você
+                                frequente diferentes turnos conforme sua disponibilidade.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Nunca fiz Crossfit, posso participar das aulas?</summary>
+                        <div class="faq-content">
+                            <p>Com certeza! Nossos coaches adaptam todos os exercícios de acordo com o seu nível de
+                                condicionamento físico atual, focando primeiro na técnica e segurança.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>O CT oferece aula experimental?</summary>
+                        <div class="faq-content">
+                            <p>Sim! Adoramos receber novos membros. Entre em contato pelo nosso WhatsApp para agendar
+                                sua primeira experiência e conhecer nossa comunidade.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary>Quais são as formas de pagamento aceitas?</summary>
+                        <div class="faq-content">
+                            <p>Trabalhamos com Pix, cartões de crédito/débito e dinheiro. Além disso, aceitamos
+                                benefícios como Wellhub (Gympass), TotalPass e GuruPass.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
     </main>
-        <footer id="rodape">
-            <div class="container-footer">
-                <div class="footer-col">
-                    <img src="./assets/img/logo.png" alt="Logo Cross Ark" class="footer-logo">
-                    <p class="footer-desc">
-                        Transformando vidas através do movimento em Suzano. Alta performance, técnica e comunidade em um
-                        só
-                        lugar.
-                    </p>
-                </div>
-                <div class="footer-col">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#aulas">Aulas</a></li>
-                        <li><a href="#plano">Planos</a></li>
-                        <li><a href="#horarios">Horários</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Onde Estamos</h3>
-                    <p>Rodovia Índio Tibiriçá, 12.829A - Km 58,5 Palmeiras de São Paulo<br>Suzano - SP, 08630-000</p>
-                    <a href="https://www.google.com/maps/place/CROSS+ARK/@-23.6473824,-46.3243385,20.5z/data=!4m9!1m2!2m1!1srod+índio+tibiriçá+12.829a+km58+5+palmeiras+de+são+paulo+suzano+sp+08630-000+brasil!3m5!1s0x94ce7300488f8897:0x6da08da153b146a2!8m2!3d-23.6475722!4d-46.3240336!16s%2Fg%2F11ywqz7cvt?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank" class="maps-link">
+
+    <footer id="rodape">
+        <div class="container-footer">
+            <div class="footer-col">
+                <img src="./assets/img/logo.png" alt="Logo Cross Ark" class="footer-logo">
+                <p class="footer-desc">
+                    Transformando vidas através do movimento em Suzano. Alta performance, técnica e comunidade em um só
+                    lugar.
+                </p>
+            </div>
+            <nav class="footer-col" aria-label="Links do rodapé">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#aulas">Aulas</a></li>
+                    <li><a href="#plano">Planos</a></li>
+                    <li><a href="#horarios">Horários</a></li>
+                    <li><a href="#perguntas">Perguntas</a></li>
+                </ul>
+            </nav>
+            <section class="footer-col">
+                <h3>Onde Estamos</h3>
+                <address>
+                    Rodovia Índio Tibiriçá, 12.829A - Km 58,5 Palmeiras de São Paulo<br>Suzano - SP, 08630-000
+                </address>
+                <a href="https://www.google.com/maps/place/CROSS+ARK/@-23.6473824,-46.3243385,20.5z/data=!4m9!1m2!2m1!1srod+índio+tibiriçá+12.829a+km58+5+palmeiras+de+são+paulo+suzano+sp+08630-000+brasil!3m5!1s0x94ce7300488f8897:0x6da08da153b146a2!8m2!3d-23.6475722!4d-46.3240336!16s%2Fg%2F11ywqz7cvt?entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener" class="maps-link"> Veja! </a>
+                <div class="social-icons">
+                    <p>Siga-nos:</p>
+                    <a href="https://www.instagram.com/ctcrossark/?hl=pt">
+                        <img src="./assets/img/instagram.png" alt="Instagram do CT Cross Ark">
                     </a>
-                    <div class="social-icons">
-                        <p>Siga-nos:</p>
-                        <a href="https://www.instagram.com/ctcrossark/?hl=pt">Instagram</a> | <a
-                            href="https://wa.me/5511989815983">WhatsApp</a>
-                    </div>
+                    <a href="https://wa.me/5511989815983">
+                        <img src="./assets/img/whats.png" alt="WhatsApp do CT Cross Ark">
+                    </a>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CT Cross Ark - Todos os direitos reservados.</p>
-            </div>
-        </footer>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p><small>© 2026 CT Cross Ark - Todos os direitos reservados.</small></p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
