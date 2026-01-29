@@ -109,11 +109,19 @@
     position: relative; 
     display: flex;
 }
-#inicio h2, p, h3 {
+#inicio h2 {
     color: white;
 }
 
-.imagemfundo img {
+#inicio h1{
+    color: white;
+    font-family: "Rubik Distressed", sans-serif;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+#inicio img{
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -122,13 +130,19 @@
     filter: brightness(0.5); 
 }
 
-.titulo h1 {
-    color: white;
-    text-align: center;
-    margin-top: 2%;
-    font-size: xx-large;
-    font-family: "Rubik Distressed", system-ui;
-    margin-bottom: 2%;
+#inicio p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+#inicio strong{
+    color: rgb(255, 244, 233);
+    display: block;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 25px;
 }
 
 .cmc {
@@ -144,30 +158,7 @@
     text-align: left;
 }
 
-.cmc h1 {
-    color: white;
-    font-family: "Rubik Distressed", system-ui;
-    font-size: 2.8rem;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.cmc p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: #ffffff;
-}
-
-.cmc .assinatura {
-    color: rgb(255, 244, 233);
-    display: block;
-    font-size: 0.9rem;
-    opacity: 0.85;
-    margin-bottom: 25px;
-}
-
-.btn-cta {
+#inicio a{
     display: inline-block;
     padding: 12px 28px;
     border: 2px solid #22211d;
@@ -179,7 +170,7 @@
     transition: 0.3s;
 }
 
-.btn-cta:hover {
+#inicio a:hover{
     background-color: #583014;
     color: #ffffff;
 }
@@ -206,15 +197,15 @@
     max-width: 600px;
 }
 
-.sobrebox h2 {
-    font-family: "Rubik Distressed", system-ui;
+#sobre h2 {
+    font-family: "Rubik Distressed", sans-serif;
     font-size: 2.8rem;
     color: #553e2d;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.sobrebox h3 {
+#sobre h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
@@ -232,7 +223,7 @@
     margin-top: 10px;
 }
 
-.sobrebox p {
+#sobre p {
     font-family: 'Montserrat', sans-serif;
     color: #333;
     line-height: 1.8;
@@ -247,7 +238,7 @@
     justify-content: center;
 }
 
-.sobre-imagem img {
+#sobre img {
     width: 100%;
     max-width: 500px;
     border-radius: 8px;
@@ -271,7 +262,7 @@
 }
 
 .tit-aulas h2 { 
-    font-family: "Rubik Distressed", system-ui;
+    font-family: "Rubik Distressed", sans-serif;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
@@ -306,7 +297,7 @@
     justify-content: flex-start;
 }
 
-.img-crosskids img {
+#aulas img {
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
@@ -318,8 +309,8 @@
     border-radius: 15px;
 }
 
-.aulasinfo h3 {
-    font-family: "Rubik Distressed", system-ui;
+#aulas h3 {
+    font-family: "Rubik Distressed", sans-serif;
     font-size: 2.5rem; 
     color: #35271c;
     margin-bottom: 20px;
@@ -351,14 +342,14 @@
     margin-bottom: 50px;
 }
 
-.tit-planos h2 { 
-    font-family: "Rubik Distressed", system-ui;
+#plano h2 { 
+    font-family: "Rubik Distressed", sans-serif;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
 }
 
-.tit-planos p {
+#plano  p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -382,7 +373,7 @@
     padding-bottom: 40px;
 }
 
-.planos-toggle-container {
+#plano nav {
     display: flex;
     background-color: #dfd8d1;  
     padding: 5px;
@@ -393,7 +384,7 @@
     gap: 5px;
 }
 
-.plan-btn {
+#plano button {
     flex: 1;
     border: none;
     background: transparent;
@@ -408,7 +399,7 @@
     text-transform: uppercase;
 }
 
-.plan-btn.active {
+#plano button.active {
     background-color: #35271c;
     color: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -438,7 +429,7 @@
     to { opacity: 1; transform: translateY(0); }
 }
 
-.obs-planos {
+#plano small {
     display: block;
     margin-bottom: 5px;
     font-size: 0.8rem;
@@ -541,12 +532,12 @@
     align-items: center;
 }
 
-.tit-horarios {
+#horarios > header {
     align-items: center;
     margin-bottom: 50px;
 }
 
-.tit-horarios h2{
+#horarios > header h2{
     font-family: "Rubik Distressed", system-ui;
     font-size: 2.8rem;
     color: bisque;
@@ -555,7 +546,7 @@
     text-align: center;
 }
 
-.tit-horarios p{
+#horarios > header p{
     color: #dfd8d1;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -579,14 +570,13 @@
     padding-bottom: 40px;
 }
 
-.text-title-hr h2 {
+#horarios > div h2{
     text-align: center;
     color: #161212;
     font-family: "Rubik Distressed", system-ui;
-    margin-top: -10px;
+    margin-top: 10px;
     font-size: 2rem;
     margin-bottom: 50px;
-
 }
 
 .grade-horarios {
@@ -597,13 +587,13 @@
     flex-wrap: wrap;
 }
 
-.coluna-dia {
+#horarios > div article {
     flex: 1;
     min-width: 250px;
     text-align: center;
 }
 
-.coluna-dia h3 {
+#horarios > div h3 {
     font-family: "Rubik Distressed", system-ui;
     color: #161212;
     font-size: 1.6rem;
@@ -613,7 +603,7 @@
     padding-bottom: 5px;
 }
 
-.periodo h4 {
+#horarios > div h4 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     color: #583014;
@@ -630,7 +620,7 @@
     margin: 20px auto;
 }
 
-.obs-horario {
+#horarios > div small {
     display: block;
     margin-top: 30px;
     font-size: 0.8rem;
@@ -639,55 +629,7 @@
     font-style: italic;
 }
 
-.kids{
-    align-items: center;
-}
-
-.kids h3 {
-    font-family: "Rubik Distressed", system-ui;
-    color: #161212;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #35271c;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
-.kids h4{
-    
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    color: #583014;
-    font-weight: 800;
-    margin-top: 60px;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-
-.periodo p, 
-.periodo p time, 
-.kids p, 
-.kids p time {
-    font-family: 'Montserrat', sans-serif;
-    color: #161212;
-    font-weight: 500;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    text-align: center;
-    font-variant-numeric: tabular-nums; 
-    letter-spacing: 0.5px;
-}
-
-.coluna-dia article, 
-.coluna-dia p {
-    font-style: normal;
-    text-decoration: none;
-}
 /* Section Peguntas */
-
-/* Section Perguntas - Ajustada sem !important */
 #perguntas {
     padding: 100px 5% 150px 5%; 
     background-color: #9c8a7f; 
@@ -703,14 +645,14 @@
     width: 100%;
 }
 
-.tit-perguntas h2 { 
+#perguntas h2 { 
     font-family: "Rubik Distressed", system-ui;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
 }
 
-.tit-perguntas p {
+#perguntas p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -735,7 +677,7 @@
     gap: 12px;
 }
 
-.faq-item {
+#perguntas details{
     background-color: #f9f7f5;
     border: 1px solid #35271c;
     border-radius: 10px;
@@ -878,6 +820,16 @@
     color: white;
 }
 
+.icons-contato{
+    display: flex;
+    gap: 20px;
+}
+
+.icons-contato img{
+    max-width: 35px;
+    height: 35px;
+}
+
 .social-icons {
     margin-top: 20px;
     font-size: 0.9rem;
@@ -885,11 +837,6 @@
 }
 .social-icons p{
     margin-bottom: 5px;
-}
-
-.social-icons img{
-    max-width: 35px;
-    height: 35px;
 }
 
 .social-icons a{
@@ -904,6 +851,8 @@
     font-size: 0.8rem;
     color: #777;
 }
+
+
 
 /* Media Queries */
 
@@ -1106,6 +1055,7 @@
 
     .divisor {
         margin: 0 auto 25px;
+        margin-top: 10px;
     }
 
     .sobrebox p {
@@ -1267,7 +1217,15 @@
     .footer-col h3 {
         margin-top: 20px;
     }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
+
 
 
 
