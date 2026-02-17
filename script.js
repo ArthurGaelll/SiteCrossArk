@@ -28,41 +28,23 @@ document.querySelectorAll('.plan-btn').forEach(button => {
     });
 });
 
-document.querySelectorAll('.plan-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        // 1. Remove classe 'active' de todos e adiciona no clicado
-        document.querySelectorAll('.plan-btn').forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
+const planSelect = document.getElementById('plan-select');
+const displayPrice = document.getElementById('display-price');
+const displayLabel = document.getElementById('display-label');
 
-        // 2. Captura os dados do botão
-        const newPrice = button.getAttribute('data-price');
-        const newLabel = button.getAttribute('data-label');
+planSelect.addEventListener('change', (e) => {
+    // Pega o valor (preço) selecionado
+    const selectedPrice = e.target.value;
+    // Pega o texto da opção selecionada (Ex: Mensal)
+    const selectedLabel = e.target.options[e.target.selectedIndex].text;
 
-        // 3. Atualiza o card com animação
-        const priceEl = document.getElementById('display-price');
-        const labelEl = document.getElementById('display-label');
-
-        // Adiciona classe de animação
-        priceEl.parentElement.classList.remove('fade-in');
-        void priceEl.offsetWidth; // Truque para resetar animação CSS
-        priceEl.parentElement.classList.add('fade-in');
-
-        // Troca o texto
-        priceEl.innerText = `R$ ${newPrice}`;
-        labelEl.innerText = newLabel;
-    });
-});
-
-
-
-const items = document.querySelectorAll(".faq-item");
-
-items.forEach((item) => {
-    item.addEventListener("click", () => {
-        items.forEach((otherItem) => {
-            if (otherItem !== item) {
-                otherItem.removeAttribute("open");
-            }
-        });
-    });
+    // Atualiza a tela com animação de fade
+    const card = document.querySelector('.planosinfo');
+    card.style.opacity = '0';
+    
+    setTimeout(() => {
+        displayPrice.innerText = `R$ ${selectedPrice}`;
+        displayLabel.innerText = selectedLabel;
+        card.style.opacity = '1';
+    }, 200);
 });

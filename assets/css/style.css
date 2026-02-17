@@ -255,20 +255,20 @@
     align-items: flex-start; 
 }
 
-.tit-aulas {
+#aulas > header {
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
 }
 
-.tit-aulas h2 { 
+#aulas > header h2 { 
     font-family: "Rubik Distressed", sans-serif;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
 }
 
-.tit-aulas p {
+#aulas > header p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -291,13 +291,13 @@
     width: 100%;
 }
 
-.img-crosskids {
+#aulas > article figure {
     flex: 1; 
     display: flex;
     justify-content: flex-start;
 }
 
-#aulas img {
+#aulas > article img {
     width: 100%;
     max-width: 500px;
     border-radius: 12px;
@@ -309,7 +309,7 @@
     border-radius: 15px;
 }
 
-#aulas h3 {
+#aulas > article h3 {
     font-family: "Rubik Distressed", sans-serif;
     font-size: 2.5rem; 
     color: #35271c;
@@ -317,7 +317,7 @@
     text-align: center;
 }
 
-.aulasinfo p {
+#aulas > article p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.8;
@@ -337,19 +337,20 @@
     align-items: center; 
 }
 
-.tit-planos {
+#planos > header{
     text-align: center;
     margin-bottom: 50px;
 }
 
-#plano h2 { 
+#plano > header h2 { 
     font-family: "Rubik Distressed", sans-serif;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
+    text-align: center;
 }
 
-#plano  p {
+#plano > header p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -371,6 +372,50 @@
     width: 100%;
     min-height: 200px;
     padding-bottom: 40px;
+}
+
+/* Estilização da caixa do Select */
+.select-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+#plan-select {
+    width: 100%;
+    padding: 12px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #35271c;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px; 
+    appearance: none;   
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+
+.select-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+#plan-select:focus {
+    outline: none;
+    border-color: #35271c;
 }
 
 #plano nav {
@@ -447,7 +492,7 @@
     border-bottom: 1px solid rgba(53, 39, 28, 0.1); 
 }
 
-.planosinfo h3 {
+#plano h3 {
     font-family: "Rubik Distressed", system-ui;
     font-size: 1.5rem; 
     color: #35271c;
@@ -475,7 +520,7 @@
     margin-top: 10px;
 }
 
-.formas-pagamento-mini span {
+#plano span{
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem; 
     font-weight: 700;
@@ -505,20 +550,6 @@
     gap: 15px;
     margin-top: 10px;
     margin-right: -10px;
-}
-
-.aceitamos-tbm span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.7rem; 
-    font-weight: 700;
-    color: #35271c;
-    text-transform: uppercase;
-}
-
-.textp p{
-    font-size: small;
-    color: #35271c;
-    margin-top: 0;
 }
 
 /* Section Horarios     */
@@ -639,20 +670,20 @@
     justify-content: center;
 }
 
-.tit-perguntas{
+#perguntas > header{
     text-align: center;
     margin-bottom: 50px;
     width: 100%;
 }
 
-#perguntas h2 { 
+#perguntas > header h2 { 
     font-family: "Rubik Distressed", system-ui;
     font-size: 2.8rem;
     color: #35271c;
     text-transform: uppercase;
 }
 
-#perguntas p {
+#perguntas > header p {
     color: #35271c;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -677,19 +708,19 @@
     gap: 12px;
 }
 
-#perguntas details{
+#perguntas > div details{
     background-color: #f9f7f5;
     border: 1px solid #35271c;
     border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-.faq-item[open] {
+#perguntas > div details[open] {
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(53, 39, 28, 0.1);
 }
 
-.faq-item summary {
+#perguntas > div details summary {
     padding: 18px 25px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -703,18 +734,18 @@
 }
 
 
-.faq-item summary::-webkit-details-marker {
+#perguntas > div details summary::-webkit-details-marker {
     display: none;
 }
 
-.faq-item summary::after {
+#perguntas > div details summary::after {
     content: '+';
     font-size: 1.4rem;
     color: #583014;
     transition: transform 0.3s ease;
 }
 
-.faq-item[open] summary::after {
+#perguntas > div details[open] summary::after {
     transform: rotate(45deg);
 }
 
@@ -724,7 +755,7 @@
     animation: slideDown 0.4s ease-out;
 }
 
-.container-perguntas .faq-content p {
+.container-perguntas #perguntas > div details p {
     color: #444;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400; 
@@ -1081,15 +1112,15 @@
         align-items: center; 
     }
 
-    .aulasinfo p{
+    #aulas > article p{
         text-align: left;
     }
 
-    .aulasinfo h3 {
+    #aulas > article h3 {
         font-size: 1.8rem;
     }
     
-    .img-crosskids img {
+     #aulas > article img {
         max-width: 100%;
     }
 }
@@ -1224,6 +1255,111 @@
         align-items: center;
     }
 }
+
+
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none; 
+    }
+
+   
+    .cmc {
+        left: 5%; 
+        transform: translateY(-50%);
+        width: 90%;
+        padding: 25px;
+        max-width: none;
+    }
+
+    #inicio h1 {
+        font-size: 1.8rem; 
+        text-align: center;
+    }
+
+    #inicio p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    
+    .container-sobre, .container-aulas {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    #sobre img, #aulas > article img {
+        max-width: 100%;
+        box-shadow: 10px 10px 0px #35271c;
+    }
+
+    #plano nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+        border-radius: 15px;
+        max-width: 100%;
+    }
+
+    #plano button {
+        flex: none; 
+        width: auto;
+        padding: 10px 12px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    #inicio h1 {
+        font-size: 1.5rem; 
+    }
+
+    .logo img {
+        max-width: 110px;
+        margin-left: 10px;
+    }
+
+    .hamburger {
+        margin-right: 15px;
+    }
+
+    
+    #plano h2 {
+        font-size: 2rem;
+    }
+
+    #plano button {
+        font-size: 0.65rem;
+        padding: 8px 6px;
+    }
+
+    .planosinfo {
+        padding: 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #perguntas > header h2 {
+        font-size: 2.3rem;
+    }
+
+    #sobre h2{
+        font-size: 2.3rem;
+    }
+    
+}
+
 
 
 
